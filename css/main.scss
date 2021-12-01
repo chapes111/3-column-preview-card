@@ -1,0 +1,121 @@
+@use './_minireset.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$v-dark-cyan: hsl(179, 100%, 13%);
+
+$trnsp-wht: hsla(0, 0%, 100%, 0.75);
+$v-lt-gray: hsl(0, 0%, 95%);
+
+html {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  font-size: 15px;
+  margin: 1em 0 0 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container {
+  border-radius: 10px;
+  max-width: 20em;
+
+
+  overflow: hidden;
+}
+
+.container > * {
+  padding-bottom: 3em;
+}
+
+.sedans {
+  background: $bright-orange;
+}
+
+.sedans .cta-link a {
+  color: #e38826;
+}
+
+.suvs {
+  background: $dark-cyan;
+}
+
+.suvs .cta-link a {
+  color: $dark-cyan;
+}
+
+.luxury {
+  background: $v-dark-cyan;
+}
+
+.luxury .cta-link a {
+  color: $v-dark-cyan;
+}
+
+img {
+  margin: 2em 0 2em 2em;
+}
+
+.heading {
+  color: $v-lt-gray;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0 0 .7em 1em;
+}
+
+.tagline {
+  color: $v-lt-gray;
+  line-height: 1.5;
+  margin: 0 2em 1.5em 2em;
+}
+
+.cta-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $v-lt-gray;
+
+  width: 10em;
+  height: 3em;
+
+  color: $v-lt-gray;
+  border-radius: 20px;
+  margin: 0 0 0 2em;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: gray;
+    transition: 0.3s;
+
+    a {
+      color: white;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+footer {
+  background: $bright-orange;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  margin-top: 1em;
+  right: 0;
+  width: 100%;
+}
