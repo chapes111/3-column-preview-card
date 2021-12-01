@@ -9,6 +9,8 @@ $v-lt-gray: hsl(0, 0%, 95%);
 
 html {
   font-family: 'Lexend Deca', sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 body {
@@ -26,8 +28,6 @@ main {
 .container {
   border-radius: 10px;
   max-width: 20em;
-
-
   overflow: hidden;
 }
 
@@ -118,4 +118,55 @@ footer {
   margin-top: 1em;
   right: 0;
   width: 100%;
+}
+
+@media (min-width: 700px) {
+
+  main {
+    min-width: 100vw;
+    min-height: 92vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    max-width: 40em;
+  }
+
+  .luxury .cta-link {
+    margin-top: 2.8em;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    max-width: 70em;
+  }
+
+  .sedans .cta-link {
+    margin-top: 3em;
+  }
+
+  .suvs .cta-link {
+    margin-top: 3em;
+  }
 }

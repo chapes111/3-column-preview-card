@@ -2,6 +2,8 @@
 @use './_minireset.min.css';
 html {
   font-family: 'Lexend Deca', sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 body {
@@ -121,5 +123,67 @@ footer {
   margin-top: 1em;
   right: 0;
   width: 100%;
+}
+
+@media (min-width: 700px) {
+  main {
+    min-width: 100vw;
+    min-height: 92vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 40em;
+  }
+  .luxury .cta-link {
+    margin-top: 2.8em;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 70em;
+  }
+  .sedans .cta-link {
+    margin-top: 3em;
+  }
+  .suvs .cta-link {
+    margin-top: 3em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
